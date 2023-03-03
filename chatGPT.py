@@ -2,8 +2,6 @@ import os
 import openai
 openai.api_key = "YOUR_API_KEY"
 
-#model = "gpt-3.5-turbo"
-
 messages=[]
 print("Welcome to ChatGPT using the OpenAI API")
 
