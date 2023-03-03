@@ -1,13 +1,14 @@
 import os
 import openai
-openai.api_key = "API_KEY_HERE"
+openai.api_key = "YOUR_API_KEY"
+
+#model = "gpt-3.5-turbo"
 
 messages=[]
 print("Welcome to ChatGPT using the OpenAI API")
-print("")
 
 while True:
-    prompt = input("User Prompt: ")
+    prompt = input("\nUser: ")
     if prompt == 'exit':
         break
 
@@ -23,6 +24,4 @@ while True:
 
     messages.append({"role": "assistant", "content": response.choices[0].message.content})
     
-    print()
-    print("USER: " + prompt)
-    print(response.choices[0].message.content)
+    print("\n" + response.choices[0].message.content)
